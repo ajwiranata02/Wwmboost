@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WWM Boost By : A.J. Wiranata — Premium Piloting Services</title>
+<meta name="description" content="Professional game boosting for Where Winds Meet. Hand-played, fast delivery, 100% account safety.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config={theme:{extend:{colors:{gold:{DEFAULT:'#D4AF37',light:'#E8CC6E',dark:'#B8941F'},charcoal:{DEFAULT:'#111111',light:'#1A1A1A',lighter:'#222222'}},fontFamily:{inter:['Inter','sans-serif'],cinzel:['Cinzel','serif']}}}}
+</script>
+<style>
+*{font-family:'Inter',sans-serif}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#111}::-webkit-scrollbar-thumb{background:#333;border-radius:3px}::-webkit-scrollbar-thumb:hover{background:#D4AF37}
+.nav-scrolled{background-color:rgba(17,17,17,.97)!important;backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,175,55,.08)}
+.hero-overlay{background:linear-gradient(180deg,rgba(17,17,17,.25) 0%,rgba(17,17,17,.5) 40%,rgba(17,17,17,.85) 80%,rgba(17,17,17,1) 100%)}
+.card-image{transition:transform .6s cubic-bezier(.25,.46,.45,.94)}.service-card:hover .card-image{transform:scale(1.05)}
+.btn-book{position:relative;overflow:hidden;z-index:1;transition:color .35s,border-color .35s}.btn-book::before{content:'';position:absolute;inset:0;background:#D4AF37;transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.25,.46,.45,.94);z-index:-1}.btn-book:hover::before{transform:scaleX(1)}.btn-book:hover{color:#111!important;border-color:#D4AF37!important}
+.cart-overlay{opacity:0;pointer-events:none;transition:opacity .3s}.cart-overlay.open{opacity:1;pointer-events:auto}.cart-panel{transform:translateX(100%);transition:transform .4s cubic-bezier(.25,.46,.45,.94)}.cart-overlay.open .cart-panel{transform:translateX(0)}
+.faq-answer{max-height:0;overflow:hidden;padding:0;transition:max-height .4s cubic-bezier(.25,.46,.45,.94),padding .3s}.faq-item.active .faq-answer{max-height:200px;padding-top:.75rem;padding-bottom:1rem}.faq-item.active .faq-chevron{transform:rotate(180deg)}.faq-chevron{transition:transform .3s}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94),transform .7s cubic-bezier(.25,.46,.45,.94)}.reveal.visible{opacity:1;transform:translateY(0)}
+.section-title::after{content:'';display:block;width:60px;height:2px;background:#D4AF37;margin-top:1rem}.section-title.center::after{margin-left:auto;margin-right:auto}
+.mobile-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.72);opacity:0;pointer-events:none;transition:opacity .35s ease}.mobile-overlay.open{opacity:1;pointer-events:auto}
+.mobile-menu{position:fixed;top:0;right:0;width:280px;height:100%;z-index:210;transform:translateX(100%);transition:transform .35s cubic-bezier(.25,.46,.45,.94);background:#0e0e0e;border-left:1px solid rgba(255,255,255,.06)}.mobile-menu.open{transform:translateX(0)}
+#pageContent{transition:filter .35s ease}#pageContent.blurred{filter:blur(5px) brightness(.7)}
+@keyframes addFlash{0%{box-shadow:0 0 0 0 rgba(212,175,55,.5)}70%{box-shadow:0 0 0 10px rgba(212,175,55,0)}100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}}.add-flash{animation:addFlash .6s ease-out}
+@keyframes badgePop{0%{transform:scale(1)}50%{transform:scale(1.3)}100%{transform:scale(1)}}.badge-pop{animation:badgePop .3s ease-out}
+.cart-item-enter{animation:slideIn .3s ease-out}@keyframes slideIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+.brand-name{font-family:'Cinzel',serif;letter-spacing:.05em}
+.service-desc{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;max-height:2.5rem;transition:max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.3s;margin-bottom:1rem}.service-card:hover .service-desc{display:block;-webkit-line-clamp:none;max-height:12rem;color:#e5e7eb}
+.filter-btn{display:inline-flex;align-items:center;padding:.5rem 1.25rem;border:1px solid rgba(255,255,255,.12);font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#9ca3af;background:transparent;cursor:pointer;white-space:nowrap;transition:color .25s,border-color .25s,background .25s;flex-shrink:0}
+.filter-btn:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+.filter-btn.active{color:#111;background:#D4AF37;border-color:#D4AF37}
+#filterRow::-webkit-scrollbar{display:none}
+</style>
+</head>
+<body class="bg-charcoal text-gray-200 antialiased overflow-x-hidden">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-[220] transition-all duration-500">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-14 sm:h-16 md:h-20">
+<a href="#" class="flex flex-col flex-shrink-0 leading-tight">
+<span class="brand-name text-sm sm:text-base md:text-lg font-bold text-white">WWM Boost</span>
+<span class="brand-name text-[9px] sm:text-[10px] md:text-xs font-bold text-gold">By : A.J. Wiranata</span>
+</a>
+<div class="hidden md:flex items-center gap-6 lg:gap-8">
+<a href="#services" class="text-sm font-medium text-gray-400 hover:text-white transition-colors tracking-wide uppercase">Services</a>
+<a href="#guarantee" class="text-sm font-medium text-gray-400 hover:text-white transition-colors tracking-wide uppercase">Guarantee</a>
+<a href="#team" class="text-sm font-medium text-gray-400 hover:text-white transition-colors tracking-wide uppercase">Team</a>
+<a href="#faq" class="text-sm font-medium text-gray-400 hover:text-white transition-colors tracking-wide uppercase">FAQ</a>
+<button id="cartBtnDesktop" class="relative px-5 py-2.5 border border-white/20 text-white text-sm font-bold tracking-wide uppercase hover:border-gold hover:text-gold transition-all flex items-center gap-2">
+<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>Cart
+<span id="cartBadgeDesktop" class="absolute -top-2 -right-2 w-5 h-5 bg-gold text-charcoal text-[10px] font-black rounded-full flex items-center justify-center hidden">0</span>
+</button>
+</div>
+<div class="flex items-center gap-1 md:hidden">
+<button id="cartBtnMobile" class="relative p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center">
+<svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+<span id="cartBadgeMobile" class="absolute top-1 right-0.5 w-5 h-5 bg-gold text-charcoal text-[10px] font-black rounded-full flex items-center justify-center hidden">0</span>
+</button>
+<button id="menuToggle" class="flex flex-col gap-1.5 p-2.5 min-w-[44px] min-h-[44px] items-center justify-center group" aria-label="Menu">
+<span class="block w-5 h-0.5 bg-white transition-all group-[.active]:rotate-45 group-[.active]:translate-y-2"></span>
+<span class="block w-5 h-0.5 bg-white transition-all group-[.active]:opacity-0"></span>
+<span class="block w-5 h-0.5 bg-white transition-all group-[.active]:-rotate-45 group-[.active]:-translate-y-2"></span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+
+<!-- MOBILE MENU (outside navbar container to prevent containing-block height collapse bugs) -->
+<div id="mobileOverlay" class="mobile-overlay"></div>
+<div id="mobileMenu" class="mobile-menu flex flex-col pt-20 px-6 md:hidden">
+<a href="#services" class="mobile-link py-4 text-base font-semibold text-gray-300 hover:text-gold border-b border-white/5 uppercase transition-colors">Services</a>
+<a href="#guarantee" class="mobile-link py-4 text-base font-semibold text-gray-300 hover:text-gold border-b border-white/5 uppercase transition-colors">Guarantee</a>
+<a href="#team" class="mobile-link py-4 text-base font-semibold text-gray-300 hover:text-gold border-b border-white/5 uppercase transition-colors">Team</a>
+<a href="#faq" class="mobile-link py-4 text-base font-semibold text-gray-300 hover:text-gold border-b border-white/5 uppercase transition-colors">FAQ</a>
+</div>
+
+<!-- CART SIDEBAR -->
+<div id="cartOverlay" class="cart-overlay fixed inset-0 z-[300] bg-black/60">
+<div class="cart-panel absolute top-0 right-0 w-full sm:max-w-[420px] h-full bg-[#141414] border-l border-white/5 flex flex-col">
+<div class="flex items-center justify-between px-4 sm:px-6 py-4 border-b border-white/5">
+<div class="flex items-center gap-2"><h2 class="text-base sm:text-lg font-bold text-white">Your Cart</h2><span id="cartCountHeader" class="text-[11px] text-gray-500">(0 items)</span></div>
+<button id="cartClose" class="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-gray-500 hover:text-white transition-colors"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
+</div>
+<div id="cartItems" class="flex-1 overflow-y-auto px-4 sm:px-6 py-3">
+<div id="cartEmpty" class="flex flex-col items-center justify-center h-full text-center">
+<svg class="w-14 h-14 text-gray-800 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+<p class="text-sm text-gray-600">Your cart is empty</p><p class="text-xs text-gray-700 mt-1">Browse our services and add packages</p>
+</div>
+</div>
+<div id="cartFooter" class="border-t border-white/5 px-4 sm:px-6 py-4 hidden">
+<div class="flex items-center justify-between mb-1"><span class="text-xs font-medium text-gray-400 uppercase tracking-wider">Total</span><span id="cartTotal" class="text-lg sm:text-xl font-black text-white">$0.00</span></div>
+<div class="mb-3">
+  <label for="paymentMethod" class="block text-[9px] font-semibold text-gray-500 uppercase tracking-widest mb-1">Select Payment Method</label>
+  <select id="paymentMethod" class="w-full px-3 py-2 bg-charcoal border border-white/10 text-xs text-white outline-none focus:border-gold/50 transition-colors rounded-none cursor-pointer">
+    <option value="GCASH" class="bg-charcoal text-white">GCASH</option>
+    <option value="ALIPAY" class="bg-charcoal text-white">ALIPAY</option>
+    <option value="PAYPAL" class="bg-charcoal text-white">PAYPAL</option>
+  </select>
+</div>
+<div class="text-[10px] text-amber-500 font-bold mb-3 text-center border border-amber-500/20 bg-amber-500/5 py-2 px-3">⚠️ Log-in Method: NetEase accounts only</div>
+<input id="buyerName" type="text" placeholder="Your Name / Discord ID" class="w-full px-3 py-2.5 mb-3 bg-charcoal border border-white/10 text-sm text-white placeholder-gray-600 outline-none focus:border-gold/50 transition-colors rounded-none">
+<button id="checkoutBtn" class="w-full py-3.5 bg-gold text-charcoal font-bold text-xs sm:text-sm tracking-widest uppercase hover:bg-gold-light transition-colors flex items-center justify-center gap-2">
+<svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+Checkout via WhatsApp</button>
+</div>
+</div>
+</div>
+
+<!-- PAGE CONTENT WRAPPER (for blur effect) -->
+<div id="pageContent">
+
+<!-- HERO -->
+<section id="hero" class="relative w-full min-h-[100svh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0">
+<img src="assets/hero-bg.png" alt="Where Winds Meet Landscape" class="w-full h-full object-cover" loading="eager">
+<div class="hero-overlay absolute inset-0"></div>
+</div>
+<div class="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto pt-14 sm:pt-0">
+<p class="text-gold text-[10px] sm:text-xs md:text-sm font-semibold tracking-[.25em] uppercase mb-4 sm:mb-6 reveal">Premium Piloting Services</p>
+<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white leading-[1.1] tracking-tight mb-4 sm:mb-6 reveal">Master the Winds.<br><span class="text-gold">Skip the Grind.</span></h1>
+<p class="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed reveal">Premium & Secure Piloting Services for Where Winds Meet. Hand-played by expert players with guaranteed account safety.</p>
+<a href="#services" class="inline-block px-8 sm:px-10 py-3.5 sm:py-4 bg-gold text-charcoal font-bold text-xs sm:text-sm tracking-widest uppercase hover:bg-gold-light transition-colors reveal">Explore Packages</a>
+</div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+<span class="text-[9px] tracking-[.25em] uppercase text-gray-500">Scroll</span>
+<div class="w-px h-6 bg-gradient-to-b from-gray-500 to-transparent animate-pulse"></div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-14 sm:py-20 md:py-28 lg:py-32 scroll-mt-16 sm:scroll-mt-20 md:scroll-mt-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="mb-8 sm:mb-12 md:mb-16 reveal">
+<p class="text-gold text-[10px] sm:text-xs font-semibold tracking-[.3em] uppercase mb-2">Our Packages</p>
+<h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-white tracking-tight section-title">Service Catalog</h2>
+</div>
+
+<!-- SAFETY NOTICE & NETEASE TUTORIAL -->
+<div class="mb-10 p-5 sm:p-6 bg-amber-500/5 border border-amber-500/20 rounded-sm reveal">
+  <div class="flex flex-col md:flex-row md:items-start gap-4 justify-between">
+    <div class="max-w-2xl">
+      <div class="flex items-center gap-2 text-amber-500 font-bold text-xs sm:text-sm uppercase tracking-wider mb-2">
+        <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        Safety Policy: NetEase Accounts Only
+      </div>
+      <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
+        To guarantee 100% account safety and prevent temporary lockouts, we <strong>exclusively</strong> accept piloting orders using NetEase account logins. Social logins (Google, Facebook, Apple) must be bound to a NetEase account.
+      </p>
+    </div>
+    <button id="showTutorialBtn" class="flex-shrink-0 self-start md:self-center px-4 py-2 border border-amber-500/30 text-amber-500 hover:bg-amber-500/10 hover:border-amber-500 transition-colors text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+      View Binding Tutorial
+    </button>
+  </div>
+</div>
+<!-- FILTER PILLS -->
+<div class="mb-8 sm:mb-10">
+  <div class="flex overflow-x-auto gap-2 sm:gap-3 pb-2 -mx-1 px-1" style="scrollbar-width:none;-ms-overflow-style:none" id="filterRow">
+    <button class="filter-btn active" data-filter="all">All Services</button>
+    <button class="filter-btn" data-filter="exploration">Map Exploration</button>
+    <button class="filter-btn" data-filter="quests">Quests &amp; Oddities</button>
+    <button class="filter-btn" data-filter="pvp-titles">PVP &amp; Titles</button>
+    <button class="filter-btn" data-filter="custom">Custom Builds</button>
+  </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-8" id="servicesGrid"></div>
+</div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="guarantee" class="py-14 sm:py-20 md:py-28 border-t border-white/5 scroll-mt-16 sm:scroll-mt-20 md:scroll-mt-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-10 sm:mb-16 reveal">
+<p class="text-gold text-[10px] sm:text-xs font-semibold tracking-[.3em] uppercase mb-2">Our Guarantee</p>
+<h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-white tracking-tight section-title center">Why Choose Us</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 md:gap-8">
+<div class="text-center reveal">
+<div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center">
+<svg class="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/></svg>
+</div>
+<h3 class="text-base font-bold text-white mb-2">100% Hand-Played</h3>
+<p class="text-xs sm:text-sm text-gray-500 leading-relaxed max-w-xs mx-auto">Every session performed manually by experienced players. No automation, no bots — just pure human skill.</p>
+</div>
+<div class="text-center reveal">
+<div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center">
+<svg class="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+</div>
+<h3 class="text-base font-bold text-white mb-2">Account Security</h3>
+<p class="text-xs sm:text-sm text-gray-500 leading-relaxed max-w-xs mx-auto">Your credentials are encrypted and never shared. We use VPN-matched regions and strict privacy protocols.</p>
+</div>
+<div class="text-center reveal">
+<div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center">
+<svg class="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+</div>
+<h3 class="text-base font-bold text-white mb-2">Fast Delivery</h3>
+<p class="text-xs sm:text-sm text-gray-500 leading-relaxed max-w-xs mx-auto">Most orders start within 1 hour of confirmation. Track real-time progress via our dedicated WhatsApp support.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TEAM & GUILD -->
+<section id="team" class="py-14 sm:py-20 md:py-28 border-t border-white/5 bg-charcoal-light/10 scroll-mt-16 sm:scroll-mt-20 md:scroll-mt-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Team Info -->
+    <div class="reveal mb-12 sm:mb-16">
+      <p class="text-gold text-[10px] sm:text-xs font-semibold tracking-[.3em] uppercase mb-2">Our Elites</p>
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-white tracking-tight section-title mb-6">Professional Team</h2>
+      <p class="text-xs sm:text-sm text-gray-500 mb-8 leading-relaxed max-w-2xl">
+        Our specialized team consists of veteran players who log in safely using NetEase verification. Your progress is handled by dedicated experts.
+      </p>
+      
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+        <!-- Booster 1 (Ryven) -->
+        <div class="group p-5 bg-gradient-to-b from-white/[0.03] to-white/[0.01] backdrop-blur-sm border border-white/5 hover:border-gold/30 hover:shadow-[0_0_15px_rgba(212,175,55,0.06)] transition-all duration-300 flex flex-col items-center text-center rounded-sm transform hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center font-bold text-gold mb-3 transition-transform duration-500 group-hover:scale-105 group-hover:border-gold/60 shadow-[0_0_8px_rgba(212,175,55,0.1)] font-cinzel text-sm">RY</div>
+          <h4 class="text-sm font-bold text-white tracking-wide">Ryven</h4>
+          <p class="text-[10px] text-gray-500 mt-2 font-mono">UID: 4075909988</p>
+          <span class="inline-flex items-center gap-1.5 text-[9px] text-green-500 font-bold mt-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>Active</span>
+        </div>
+
+        <!-- Booster 2 (Liangyi) -->
+        <div class="group p-5 bg-gradient-to-b from-white/[0.03] to-white/[0.01] backdrop-blur-sm border border-white/5 hover:border-gold/30 hover:shadow-[0_0_15px_rgba(212,175,55,0.06)] transition-all duration-300 flex flex-col items-center text-center rounded-sm transform hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center font-bold text-gold mb-3 transition-transform duration-500 group-hover:scale-105 group-hover:border-gold/60 shadow-[0_0_8px_rgba(212,175,55,0.1)] font-cinzel text-sm">LY</div>
+          <h4 class="text-sm font-bold text-white tracking-wide">Liangyi</h4>
+          <p class="text-[10px] text-gray-500 mt-2 font-mono">UID: 4013839686</p>
+          <span class="inline-flex items-center gap-1.5 text-[9px] text-green-500 font-bold mt-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>Active</span>
+        </div>
+
+        <!-- Booster 3 (NH) -->
+        <div class="group p-5 bg-gradient-to-b from-white/[0.03] to-white/[0.01] backdrop-blur-sm border border-white/5 hover:border-gold/30 hover:shadow-[0_0_15px_rgba(212,175,55,0.06)] transition-all duration-300 flex flex-col items-center text-center rounded-sm transform hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center font-bold text-gold mb-3 transition-transform duration-500 group-hover:scale-105 group-hover:border-gold/60 shadow-[0_0_8px_rgba(212,175,55,0.1)] font-cinzel text-sm">NH</div>
+          <h4 class="text-sm font-bold text-white tracking-wide">NH</h4>
+          <p class="text-[10px] text-gray-500 mt-2 font-mono">UID: 4022374651</p>
+          <span class="inline-flex items-center gap-1.5 text-[9px] text-green-500 font-bold mt-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>Active</span>
+        </div>
+
+        <!-- Booster 4 (Reonic) -->
+        <div class="group p-5 bg-gradient-to-b from-white/[0.03] to-white/[0.01] backdrop-blur-sm border border-white/5 hover:border-gold/30 hover:shadow-[0_0_15px_rgba(212,175,55,0.06)] transition-all duration-300 flex flex-col items-center text-center rounded-sm transform hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center font-bold text-gold mb-3 transition-transform duration-500 group-hover:scale-105 group-hover:border-gold/60 shadow-[0_0_8px_rgba(212,175,55,0.1)] font-cinzel text-sm">RE</div>
+          <h4 class="text-sm font-bold text-white tracking-wide">Reonic</h4>
+          <p class="text-[10px] text-gray-500 mt-2 font-mono">UID: 4084643147</p>
+          <span class="inline-flex items-center gap-1.5 text-[9px] text-green-500 font-bold mt-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>Active</span>
+        </div>
+
+        <!-- Booster 5 (Roverwati) -->
+        <div class="group p-5 bg-gradient-to-b from-white/[0.03] to-white/[0.01] backdrop-blur-sm border border-white/5 hover:border-gold/30 hover:shadow-[0_0_15px_rgba(212,175,55,0.06)] transition-all duration-300 flex flex-col items-center text-center rounded-sm transform hover:-translate-y-1 col-span-2 sm:col-span-1">
+          <div class="w-12 h-12 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center font-bold text-gold mb-3 transition-transform duration-500 group-hover:scale-105 group-hover:border-gold/60 shadow-[0_0_8px_rgba(212,175,55,0.1)] font-cinzel text-sm">RO</div>
+          <h4 class="text-sm font-bold text-white tracking-wide">Roverwati</h4>
+          <p class="text-[10px] text-gray-500 mt-2 font-mono">UID: 4018277692</p>
+          <span class="inline-flex items-center gap-1.5 text-[9px] text-green-500 font-bold mt-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>Active</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Guild Alliance -->
+    <div class="reveal border-t border-white/5 pt-10 sm:pt-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <!-- Guild Text -->
+        <div class="lg:col-span-6 flex flex-col justify-center">
+          <p class="text-gold text-[10px] sm:text-xs font-semibold tracking-[.3em] uppercase mb-2">Guild Alliance</p>
+          <h3 class="text-lg sm:text-xl font-bold text-white mb-4 tracking-wide">WARUNG KOPI</h3>
+          <p class="text-xs sm:text-sm text-gray-400 leading-relaxed max-w-xl">
+            We are affiliated with the top Indonesian guild <span class="text-gold font-semibold">WARUNG KOPI</span>. Providing trusted services to the community with maximum transparency and security protocols.
+          </p>
+        </div>
+        
+        <!-- Guild Stats / Info Box -->
+        <div class="lg:col-span-6 p-6 sm:p-8 bg-[#141414] border border-white/5 rounded-sm flex flex-col justify-between">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 flex-shrink-0">
+                <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a72.58,72.58,0,1,0,52.2,69.57V0h88.09a117.39,117.39,0,0,0,10.62,47.24,116.3,116.3,0,0,0,37.39,37.38A117.75,117.75,0,0,0,448,95.34Z"/></svg>
+              </span>
+              <div>
+                <p class="text-[9px] text-gray-500 uppercase tracking-wider">TikTok Channel</p>
+                <a href="https://www.tiktok.com/@venmor23" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-bold text-white hover:text-gold transition-colors">@venmor23</a>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 flex-shrink-0">
+                <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+              </span>
+              <div>
+                <p class="text-[9px] text-gray-500 uppercase tracking-wider">Log-in Requirements</p>
+                <p class="text-xs font-bold text-amber-500">NetEase Accounts Only</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-6 border-t border-white/5 pt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex flex-col gap-1">
+              <p class="text-[10px] text-gray-500">Need support? Contact our guild admin directly:</p>
+              <a href="https://wa.me/6287781112070" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-gold hover:text-white transition-colors">
+                <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                +62 877-8111-2070
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-14 sm:py-20 md:py-28 border-t border-white/5 scroll-mt-16 sm:scroll-mt-20 md:scroll-mt-24">
+<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-8 sm:mb-12 reveal">
+<p class="text-gold text-[10px] sm:text-xs font-semibold tracking-[.3em] uppercase mb-2">Support</p>
+<h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-white tracking-tight section-title center">Frequently Asked</h2>
+</div>
+<div class="space-y-3 reveal">
+<div class="faq-item border border-white/5 bg-charcoal-light"><button class="faq-toggle w-full flex items-center justify-between px-4 sm:px-6 py-4 text-left min-h-[52px]"><span class="text-xs sm:text-sm font-semibold text-white pr-3">What log-in methods do you accept?</span><svg class="faq-chevron w-4 h-4 text-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer px-4 sm:px-6"><p class="text-xs sm:text-sm text-gray-500 leading-relaxed">For security and account safety, we exclusively accept log-ins via NetEase accounts. Social logins or other third-party accounts are not accepted due to additional verification layers and safety risks.</p></div></div>
+<div class="faq-item border border-white/5 bg-charcoal-light"><button class="faq-toggle w-full flex items-center justify-between px-4 sm:px-6 py-4 text-left min-h-[52px]"><span class="text-xs sm:text-sm font-semibold text-white pr-3">Is my account safe during the boosting process?</span><svg class="faq-chevron w-4 h-4 text-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer px-4 sm:px-6"><p class="text-xs sm:text-sm text-gray-500 leading-relaxed">Absolutely. We never use third-party tools or bots. All gameplay is done manually. Your login credentials are encrypted, and we use VPN with region-matched servers to prevent any security flags.</p></div></div>
+<div class="faq-item border border-white/5 bg-charcoal-light"><button class="faq-toggle w-full flex items-center justify-between px-4 sm:px-6 py-4 text-left min-h-[52px]"><span class="text-xs sm:text-sm font-semibold text-white pr-3">How long does a typical boosting order take?</span><svg class="faq-chevron w-4 h-4 text-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer px-4 sm:px-6"><p class="text-xs sm:text-sm text-gray-500 leading-relaxed">Timing depends on the service. Boss clears take 1–3 hours, Map Exploration 1–2 days, and Full Campaign 3–5 days. We begin within 1 hour of confirmed payment.</p></div></div>
+<div class="faq-item border border-white/5 bg-charcoal-light"><button class="faq-toggle w-full flex items-center justify-between px-4 sm:px-6 py-4 text-left min-h-[52px]"><span class="text-xs sm:text-sm font-semibold text-white pr-3">What payment methods do you accept?</span><svg class="faq-chevron w-4 h-4 text-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer px-4 sm:px-6"><p class="text-xs sm:text-sm text-gray-500 leading-relaxed">We accept GCASH, ALIPAY, and PAYPAL. All payments are confirmed within minutes.</p></div></div>
+<div class="faq-item border border-white/5 bg-charcoal-light"><button class="faq-toggle w-full flex items-center justify-between px-4 sm:px-6 py-4 text-left min-h-[52px]"><span class="text-xs sm:text-sm font-semibold text-white pr-3">Can I play while the boosting is in progress?</span><svg class="faq-chevron w-4 h-4 text-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer px-4 sm:px-6"><p class="text-xs sm:text-sm text-gray-500 leading-relaxed">For security reasons, we recommend not logging in while we're actively playing. We'll notify you via WhatsApp when each session starts and finishes.</p></div></div>
+<div class="faq-item border border-white/5 bg-charcoal-light"><button class="faq-toggle w-full flex items-center justify-between px-4 sm:px-6 py-4 text-left min-h-[52px]"><span class="text-xs sm:text-sm font-semibold text-white pr-3">Do you offer refunds?</span><svg class="faq-chevron w-4 h-4 text-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer px-4 sm:px-6"><p class="text-xs sm:text-sm text-gray-500 leading-relaxed">Yes. If we're unable to complete your order for any reason, you'll receive a full refund. Partial refunds are available for partially completed orders.</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/5 py-8 sm:py-10 md:py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+<div>
+<div class="flex flex-col leading-tight mb-3"><span class="brand-name text-sm sm:text-base font-bold text-white">WWM Boost</span><span class="brand-name text-[9px] sm:text-[10px] font-bold text-gold">By : A.J. Wiranata</span></div>
+<p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Premium game boosting & piloting services for Where Winds Meet. Trusted by hundreds of satisfied players.</p>
+</div>
+<div>
+<h4 class="text-[10px] sm:text-xs font-bold tracking-[.2em] text-gray-400 uppercase mb-3">Quick Links</h4>
+<ul class="space-y-1.5"><li><a href="#services" class="text-xs sm:text-sm text-gray-500 hover:text-gold transition-colors">Services</a></li><li><a href="#guarantee" class="text-xs sm:text-sm text-gray-500 hover:text-gold transition-colors">Guarantee</a></li><li><a href="#team" class="text-xs sm:text-sm text-gray-500 hover:text-gold transition-colors">Team</a></li><li><a href="#faq" class="text-xs sm:text-sm text-gray-500 hover:text-gold transition-colors">FAQ</a></li></ul>
+</div>
+<div>
+<h4 class="text-[10px] sm:text-xs font-bold tracking-[.2em] text-gray-400 uppercase mb-3">Connect</h4>
+<div class="flex flex-col gap-3">
+<a href="https://wa.me/6287781112070" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 group">
+<span class="w-10 h-10 bg-green-600/10 border border-green-600/20 rounded-full flex items-center justify-center group-hover:bg-green-600/20 group-hover:border-green-600/40 transition-all"><svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></span>
+<div><span class="text-xs sm:text-sm font-semibold text-white group-hover:text-gold transition-colors">Chat on WhatsApp</span></div>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3">
+<p class="text-[10px] sm:text-xs text-gray-700">&copy; 2026 WWM Boost By : A.J. Wiranata. All rights reserved.</p>
+<p class="text-[10px] sm:text-xs text-gray-700">Not affiliated with Everstone Studio or Where Winds Meet.</p>
+</div>
+</div>
+</footer>
+
+</div><!-- end #pageContent -->
+
+<!-- TUTORIAL MODAL -->
+<div id="tutorialModal" class="fixed inset-0 z-[400] bg-black/80 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+  <div class="relative bg-charcoal-light border border-white/10 w-full max-w-lg p-6 sm:p-8 flex flex-col gap-6 max-h-[90vh] overflow-y-auto rounded-sm">
+    <!-- Close Button -->
+    <button id="closeTutorialBtn" class="absolute top-4 right-4 p-2 text-gray-500 hover:text-white transition-colors" aria-label="Close">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    
+    <div>
+      <span class="text-gold text-[10px] font-bold tracking-widest uppercase">Safety Guide</span>
+      <h3 class="text-lg sm:text-xl font-bold text-white mt-1">How to Bind NetEase Account</h3>
+      <p class="text-xs text-gray-500 mt-2 leading-relaxed">Follow these simple steps to link your game account to NetEase for piloting verification.</p>
+    </div>
+    
+    <div class="space-y-4">
+      <div class="flex gap-4">
+        <div class="w-8 h-8 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center text-gold font-bold text-sm flex-shrink-0">1</div>
+        <div>
+          <h4 class="text-xs sm:text-sm font-bold text-white">Create a NetEase Account</h4>
+          <p class="text-xs text-gray-500 mt-1 leading-relaxed">Go to the official NetEase mail registration page (reg.email.163.com) to register a free email account.</p>
+        </div>
+      </div>
+      
+      <div class="flex gap-4">
+        <div class="w-8 h-8 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center text-gold font-bold text-sm flex-shrink-0">2</div>
+        <div>
+          <h4 class="text-xs sm:text-sm font-bold text-white">Open Game Account Center</h4>
+          <p class="text-xs text-gray-500 mt-1 leading-relaxed">Launch <em>Where Winds Meet</em>, open the Account Settings on the login screen or in-game menu.</p>
+        </div>
+      </div>
+      
+      <div class="flex gap-4">
+        <div class="w-8 h-8 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center text-gold font-bold text-sm flex-shrink-0">3</div>
+        <div>
+          <h4 class="text-xs sm:text-sm font-bold text-white">Link Social to NetEase Email</h4>
+          <p class="text-xs text-gray-500 mt-1 leading-relaxed">Select "Bind Email" or "Link Account" and enter the credentials of the NetEase account you registered in Step 1.</p>
+        </div>
+      </div>
+      
+      <div class="flex gap-4">
+        <div class="w-8 h-8 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center text-gold font-bold text-sm flex-shrink-0">4</div>
+        <div>
+          <h4 class="text-xs sm:text-sm font-bold text-white">Complete Piloting Verification</h4>
+          <p class="text-xs text-gray-500 mt-1 leading-relaxed">Submit your NetEase email login on checkout. Our boosters will request the 2FA code via WhatsApp when logging in.</p>
+        </div>
+      </div>
+    </div>
+    
+    <button id="gotItBtn" class="w-full py-3 bg-gold text-charcoal font-bold text-xs sm:text-sm tracking-widest uppercase hover:bg-gold-light transition-all mt-2">
+      Got It, Proceed
+    </button>
+  </div>
+</div>
+
+<!-- JS -->
+<script>
+(()=>{
+const WA='6287781112070';
+const services=[
+{id:'complete-package',category:'exploration',label:'Premium',name:'Complete Package 100% All Region',desc:'Full 100% completion across every region — all collectibles, quests, exploration points, and hidden secrets.',price:110,unit:'',image:'assets/service-map.png'},
+{id:'qinghe',category:'exploration',label:'Map Exploration',name:'Qinghe Exploration',desc:'Full exploration of the Qinghe region — all waypoints, chests, viewpoints, and hidden areas uncovered.',price:35,unit:'',image:'assets/card-qinghe.png'},
+{id:'kaifeng',category:'exploration',label:'Map Exploration',name:'Kaifeng Exploration',desc:'Full exploration of the Kaifeng region — ancient city gates, hidden districts, and all collectibles cleared.',price:45,unit:'',image:'assets/card-kaifeng.png'},
+{id:'hexi',category:'exploration',label:'Map Exploration',name:'Hexi Exploration',desc:'Full exploration of the Hexi region — rugged desert landscapes, ancient ruins, and all secrets uncovered.',price:65,unit:'',image:'assets/card-hexi.png'},
+{id:'imperial-palace',category:'exploration',label:'Map Exploration',name:'Imperial Palace Exploration',desc:'Full exploration of the majestic Imperial Palace region — elite areas, hidden corridors, and royal treasures.',price:30,unit:'',image:'assets/card-imperial.png'},
+{id:'pvp-boost',category:'pvp-titles',label:'PVP Boost',name:'PVP Progress Boost',desc:'PVP rank and arena progress piloting. Price ranges from $10 to $40 depending on your current progress.',price:10,priceRange:'$10.00 - $40.00',unit:'',image:'assets/service-pvp.png'},
+{id:'odditys',category:'quests',label:'Collection',name:'Odditys 100%',desc:'Collect all rare insects, crickets, and lotuses across the world map to upgrade your stats via the Melodies of Peace system.',price:15,unit:'',image:'assets/card-oddities.png'},
+{id:'wandering-tales',category:'quests',label:'Story',name:'Wandering Tales',desc:'Complete all Wandering Tales storylines with full dialogue and reward collection per region.',price:15,unit:'/ Region',image:'assets/service-story.png'},
+{id:'sentient-being',category:'quests',label:'Collection',name:'Sentient Beings 100%',desc:'Complete the Sentient Beings journal by clearing all regional Antiques, Boundary Stones, Chests, and Meow Meow puzzles.',price:25,unit:'',image:'assets/card-sentient-beings.png'},
+{id:'abyss-conqueror',category:'pvp-titles',label:'Title',name:'Abyss Conqueror',desc:'Defeat the high-difficulty bosses in the Abyss Trials and claim your exclusive title and epic achievements.',price:5,unit:'/ Boss',image:'assets/service-boss.png'},
+{id:'custom-title',category:'pvp-titles',label:'Title',name:'Custom Title',desc:'Earn any custom title of your choice. Pricing and requirements will be confirmed at the approval stage.',price:null,tba:true,tbaText:'Confirm at Approval',unit:'',image:'assets/card-custom-title.png'},
+{id:'custom-build',category:'custom',label:'Custom Request',name:'Build Customization',desc:'Optimize your martial arts layout with the perfect weapon pairings (Strategic Sword, Spear, Panacea Fan) and Inner Ways setups.',price:null,tba:true,tbaText:'TBA',unit:'',image:'assets/card-build.png'}
+];
+let cart=[];
+const grid=document.getElementById('servicesGrid'),cartOverlay=document.getElementById('cartOverlay'),cartItemsC=document.getElementById('cartItems'),cartEmpty=document.getElementById('cartEmpty'),cartFooter=document.getElementById('cartFooter'),cartTotal=document.getElementById('cartTotal'),cartCount=document.getElementById('cartCountHeader'),bD=document.getElementById('cartBadgeDesktop'),bM=document.getElementById('cartBadgeMobile');
+
+const fp=n=>n===null||n===undefined?'TBA':(typeof n==='string'?n:'$'+Number(n).toFixed(2));
+
+function buildCard(s){
+  const priceBlock=(s.tba && s.id !== 'custom-title')
+    ? `<div class="flex items-baseline gap-1.5 mb-4"><span class="text-lg sm:text-xl font-black text-transparent select-none tracking-widest">TBA</span></div>`
+    : (s.tba
+      ? `<div class="flex items-baseline gap-1.5 mb-4"><span class="text-lg sm:text-xl font-black text-white tracking-widest">${s.tbaText||'TBA'}</span></div>`
+      : `<div class="flex items-baseline gap-1.5 mb-4"><span class="text-lg sm:text-xl font-black text-white">${s.priceRange||fp(s.price)}</span>${s.unit?`<span class="text-[10px] sm:text-xs text-gray-600">${s.unit}</span>`:''}</div>`
+    );
+  const btn=s.tba && s.id !== 'custom-title'
+    ? `<button class="btn-book block text-center w-full py-2.5 sm:py-3 border border-white/20 text-white text-[10px] sm:text-xs font-bold tracking-widest uppercase cursor-default mt-auto" disabled>TBA</button>`
+    : `<button data-id="${s.id}" class="add-to-cart-btn btn-book block text-center w-full py-2.5 sm:py-3 border border-white/20 text-white text-[10px] sm:text-xs font-bold tracking-widest uppercase cursor-pointer mt-auto">Add to Cart</button>`;
+  return `<div class="service-card group bg-charcoal-light border border-white/5 hover:border-gold/20 transition-all duration-500 reveal visible flex flex-col" id="card-${s.id}"><div class="aspect-[4/3] overflow-hidden"><img src="${s.image}" alt="${s.name}" class="card-image w-full h-full object-cover" loading="lazy"></div><div class="p-4 sm:p-5 md:p-6 flex flex-col flex-1"><span class="text-[9px] sm:text-[10px] font-semibold tracking-[.2em] text-gold/60 uppercase">${s.label||s.category}</span><h3 class="text-sm sm:text-base md:text-lg font-bold text-white mt-1 mb-1.5 tracking-tight leading-snug">${s.name}</h3><p class="service-desc text-[11px] sm:text-xs text-gray-500 leading-relaxed flex-1">${s.desc}</p>${priceBlock}${btn}</div></div>`;
+}
+function renderServices(filter='all'){
+  const list=filter==='all'?services:services.filter(s=>s.category===filter);
+  grid.innerHTML=list.map(buildCard).join('');
+  document.querySelectorAll('.add-to-cart-btn').forEach(b=>b.addEventListener('click',()=>addToCart(b.dataset.id)));
+}
+function filterCategory(f){
+  document.querySelectorAll('#filterRow .filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.filter===f));
+  renderServices(f);
+}
+document.querySelectorAll('#filterRow .filter-btn').forEach(b=>b.addEventListener('click',()=>filterCategory(b.dataset.filter)));
+function addToCart(id){const s=services.find(x=>x.id===id);if(!s)return;const e=cart.find(x=>x.id===id);if(e)e.qty+=1;else cart.push({...s,qty:1});const c=document.getElementById('card-'+id);if(c){c.classList.remove('add-flash');void c.offsetWidth;c.classList.add('add-flash')}updateCartUI();openCart()}
+function removeFromCart(id){cart=cart.filter(x=>x.id!==id);updateCartUI()}
+function updateQty(id,d){const i=cart.find(x=>x.id===id);if(!i)return;i.qty+=d;if(i.qty<=0){removeFromCart(id);return}updateCartUI()}
+function updateCartUI(){
+  const ti=cart.reduce((s,i)=>s+i.qty,0),tp=cart.reduce((s,i)=>s+(i.price||0)*i.qty,0);
+  [bD,bM].forEach(b=>{if(ti>0){b.textContent=ti;b.classList.remove('hidden','badge-pop');void b.offsetWidth;b.classList.add('badge-pop')}else b.classList.add('hidden')});
+  cartCount.textContent=`(${ti} item${ti!==1?'s':''})`;
+  if(!cart.length){cartEmpty.classList.remove('hidden');cartFooter.classList.add('hidden');cartItemsC.querySelectorAll('.cart-item').forEach(e=>e.remove())}else{cartEmpty.classList.add('hidden');cartFooter.classList.remove('hidden');cartItemsC.querySelectorAll('.cart-item').forEach(e=>e.remove());
+  cart.forEach(item=>{
+    const el=document.createElement('div');el.className='cart-item cart-item-enter flex gap-3 py-3 border-b border-white/5';
+    const priceText = item.priceRange || fp(item.price);
+    const totalText = item.price === null ? 'TBA' : fp(item.price*item.qty);
+    el.innerHTML=`<img src="${item.image}" alt="${item.name}" class="w-14 h-14 object-cover flex-shrink-0 rounded-sm"><div class="flex-1 min-w-0"><h4 class="text-xs sm:text-sm font-bold text-white truncate">${item.name}</h4><p class="text-[10px] text-gray-500 mt-0.5">${priceText}${item.unit?' '+item.unit:''}</p><div class="flex items-center gap-2.5 mt-1.5"><button data-id="${item.id}" data-delta="-1" class="qty-btn w-7 h-7 border border-white/10 text-gray-400 hover:text-white hover:border-gold text-xs flex items-center justify-center">−</button><span class="text-xs font-semibold text-white w-4 text-center">${item.qty}</span><button data-id="${item.id}" data-delta="1" class="qty-btn w-7 h-7 border border-white/10 text-gray-400 hover:text-white hover:border-gold text-xs flex items-center justify-center">+</button></div></div><div class="flex flex-col items-end justify-between flex-shrink-0"><button data-id="${item.id}" class="remove-btn text-gray-600 hover:text-red-500 p-1"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button><span class="text-xs font-bold text-white">${totalText}</span></div>`;
+    cartItemsC.appendChild(el);
+  });
+  cartItemsC.querySelectorAll('.qty-btn').forEach(b=>b.addEventListener('click',()=>updateQty(b.dataset.id,parseInt(b.dataset.delta))));
+  cartItemsC.querySelectorAll('.remove-btn').forEach(b=>b.addEventListener('click',()=>removeFromCart(b.dataset.id)))}
+  cartTotal.textContent=fp(tp);
+}
+function openCart(){cartOverlay.classList.add('open');updatePageOverlayState()}
+function closeCart(){cartOverlay.classList.remove('open');updatePageOverlayState()}
+document.getElementById('cartBtnDesktop').addEventListener('click',openCart);
+document.getElementById('cartBtnMobile').addEventListener('click',openCart);
+document.getElementById('cartClose').addEventListener('click',closeCart);
+cartOverlay.addEventListener('click',e=>{if(e.target===cartOverlay)closeCart()});
+document.getElementById('checkoutBtn').addEventListener('click',()=>{
+  if(!cart.length)return;
+  const nameInput=document.getElementById('buyerName');
+  const name=nameInput.value.trim();
+  if(!name){alert('Please enter your Name or Discord ID before checking out.');nameInput.focus();return;}
+  const tp=cart.reduce((s,i)=>s+(i.price||0)*i.qty,0);
+  let m=`Hello WWM BOOST Admin,\nMy name is: ${name}\n\nI would like to order the following services:\n`;
+  cart.forEach(item=>{
+    const priceText = item.priceRange || fp(item.price);
+    const totalText = item.price === null ? 'TBA' : fp(item.price*item.qty);
+    const p=item.qty>1?`${item.qty} × ${priceText} = ${totalText}`:priceText;
+    m+=`- ${item.name} (${p})\n`;
+  });
+  const payMethod=document.getElementById('paymentMethod').value;
+  m+=`\nTotal: ${fp(tp)}\n\nI will complete the payment via ${payMethod}. Please let me know how to proceed.`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(m)}`,'_blank');
+});
+const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>navbar.classList.toggle('nav-scrolled',scrollY>50));
+const mt=document.getElementById('menuToggle'),mm=document.getElementById('mobileMenu'),mo=document.getElementById('mobileOverlay'),pc=document.getElementById('pageContent');
+const tm=document.getElementById('tutorialModal'),stb=document.getElementById('showTutorialBtn'),ctb=document.getElementById('closeTutorialBtn'),gib=document.getElementById('gotItBtn');
+
+function updatePageOverlayState() {
+  const menuOpen = mm.classList.contains('open');
+  const cartOpen = cartOverlay.classList.contains('open');
+  const tutOpen = tm ? tm.classList.contains('open') : false;
+  const anyOpen = menuOpen || cartOpen || tutOpen;
+  
+  const html = document.documentElement;
+  const body = document.body;
+  
+  if(anyOpen) {
+    body.classList.add('overflow-hidden');
+    html.classList.add('overflow-hidden');
+    pc.classList.add('blurred');
+  } else {
+    body.classList.remove('overflow-hidden');
+    html.classList.remove('overflow-hidden');
+    pc.classList.remove('blurred');
+  }
+}
+
+// Prevent background scroll leak on mobile touchmove
+mo.addEventListener('touchmove', e => e.preventDefault(), { passive: false });
+mm.addEventListener('touchmove', e => e.preventDefault(), { passive: false });
+cartOverlay.addEventListener('touchmove', e => {
+  if (e.target === cartOverlay) e.preventDefault();
+}, { passive: false });
+if (tm) {
+  tm.addEventListener('touchmove', e => {
+    if (e.target === tm) e.preventDefault();
+  }, { passive: false });
+}
+
+function toggleMenu(open){const isOpen=open!==undefined?open:!mm.classList.contains('open');mt.classList.toggle('active',isOpen);mm.classList.toggle('open',isOpen);mo.classList.toggle('open',isOpen);updatePageOverlayState()}mt.addEventListener('click',()=>toggleMenu());mo.addEventListener('click',()=>toggleMenu(false));document.querySelectorAll('.mobile-link').forEach(l=>l.addEventListener('click',()=>toggleMenu(false)));
+
+window.addEventListener('resize',()=>{if(window.innerWidth>=768&&mm.classList.contains('open')){toggleMenu(false)}});
+
+function toggleTutorial(open){
+  const isOpen=open!==undefined?open:!tm.classList.contains('open');
+  tm.classList.toggle('open',isOpen);
+  tm.classList.toggle('opacity-0',!isOpen);
+  tm.classList.toggle('pointer-events-none',!isOpen);
+  updatePageOverlayState();
+}
+if(stb)stb.addEventListener('click',()=>toggleTutorial(true));
+if(ctb)ctb.addEventListener('click',()=>toggleTutorial(false));
+if(gib)gib.addEventListener('click',()=>toggleTutorial(false));
+if(tm)tm.addEventListener('click',e=>{if(e.target===tm)toggleTutorial(false)});
+
+
+
+document.querySelectorAll('.faq-toggle').forEach(t=>t.addEventListener('click',()=>{const i=t.parentElement,a=i.classList.contains('active');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('active'));if(!a)i.classList.add('active')}));
+const ro=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');ro.unobserve(x.target)}}),{threshold:.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('.reveal').forEach(e=>ro.observe(e));
+renderServices()})();
+</script>
+</body>
+</html>
