@@ -123,7 +123,7 @@ Checkout via WhatsApp</button>
 <!-- HERO -->
 <section id="hero" class="relative w-full min-h-[100svh] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0">
-<img src="assets/hero-bg.png" alt="Where Winds Meet Landscape" class="w-full h-full object-cover" loading="eager">
+<img src="hero-bg.png" alt="Where Winds Meet Landscape" class="w-full h-full object-cover" loading="eager">
 <div class="hero-overlay absolute inset-0"></div>
 </div>
 <div class="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto pt-14 sm:pt-0">
@@ -439,18 +439,18 @@ Checkout via WhatsApp</button>
 (()=>{
 const WA='6287781112070';
 const services=[
-{id:'complete-package',category:'exploration',label:'Premium',name:'Complete Package 100% All Region',desc:'Full 100% completion across every region — all collectibles, quests, exploration points, and hidden secrets.',price:110,unit:'',image:'assets/service-map.png'},
-{id:'qinghe',category:'exploration',label:'Map Exploration',name:'Qinghe Exploration',desc:'Full exploration of the Qinghe region — all waypoints, chests, viewpoints, and hidden areas uncovered.',price:35,unit:'',image:'assets/card-qinghe.png'},
-{id:'kaifeng',category:'exploration',label:'Map Exploration',name:'Kaifeng Exploration',desc:'Full exploration of the Kaifeng region — ancient city gates, hidden districts, and all collectibles cleared.',price:45,unit:'',image:'assets/card-kaifeng.png'},
-{id:'hexi',category:'exploration',label:'Map Exploration',name:'Hexi Exploration',desc:'Full exploration of the Hexi region — rugged desert landscapes, ancient ruins, and all secrets uncovered.',price:65,unit:'',image:'assets/card-hexi.png'},
-{id:'imperial-palace',category:'exploration',label:'Map Exploration',name:'Imperial Palace Exploration',desc:'Full exploration of the majestic Imperial Palace region — elite areas, hidden corridors, and royal treasures.',price:30,unit:'',image:'assets/card-imperial.png'},
-{id:'pvp-boost',category:'pvp-titles',label:'PVP Boost',name:'PVP Progress Boost',desc:'PVP rank and arena progress piloting. Price ranges from $10 to $40 depending on your current progress.',price:10,priceRange:'$10.00 - $40.00',unit:'',image:'assets/service-pvp.png'},
-{id:'odditys',category:'quests',label:'Collection',name:'Odditys 100%',desc:'Collect all rare insects, crickets, and lotuses across the world map to upgrade your stats via the Melodies of Peace system.',price:15,unit:'',image:'assets/card-oddities.png'},
-{id:'wandering-tales',category:'quests',label:'Story',name:'Wandering Tales',desc:'Complete all Wandering Tales storylines with full dialogue and reward collection per region.',price:15,unit:'/ Region',image:'assets/service-story.png'},
-{id:'sentient-being',category:'quests',label:'Collection',name:'Sentient Beings 100%',desc:'Complete the Sentient Beings journal by clearing all regional Antiques, Boundary Stones, Chests, and Meow Meow puzzles.',price:25,unit:'',image:'assets/card-sentient-beings.png'},
-{id:'abyss-conqueror',category:'pvp-titles',label:'Title',name:'Abyss Conqueror',desc:'Defeat the high-difficulty bosses in the Abyss Trials and claim your exclusive title and epic achievements.',price:5,unit:'/ Boss',image:'assets/service-boss.png'},
-{id:'custom-title',category:'pvp-titles',label:'Title',name:'Custom Title',desc:'Earn any custom title of your choice. Pricing and requirements will be confirmed at the approval stage.',price:null,tba:true,tbaText:'Confirm at Approval',unit:'',image:'assets/card-custom-title.png'},
-{id:'custom-build',category:'custom',label:'Custom Request',name:'Build Customization',desc:'Optimize your martial arts layout with the perfect weapon pairings (Strategic Sword, Spear, Panacea Fan) and Inner Ways setups.',price:null,tba:true,tbaText:'TBA',unit:'',image:'assets/card-build.png'}
+{id:'complete-package',category:'exploration',label:'Premium',name:'Complete Package 100% All Region',desc:'Full 100% completion across every region — all collectibles, quests, exploration points, and hidden secrets.',price:110,unit:'',image:'service-map.png'},
+{id:'qinghe',category:'exploration',label:'Map Exploration',name:'Qinghe Exploration',desc:'Full exploration of the Qinghe region — all waypoints, chests, viewpoints, and hidden areas uncovered.',price:35,unit:'',image:'card-qinghe.png'},
+{id:'kaifeng',category:'exploration',label:'Map Exploration',name:'Kaifeng Exploration',desc:'Full exploration of the Kaifeng region — ancient city gates, hidden districts, and all collectibles cleared.',price:45,unit:'',image:'card-kaifeng.png'},
+{id:'hexi',category:'exploration',label:'Map Exploration',name:'Hexi Exploration',desc:'Full exploration of the Hexi region — rugged desert landscapes, ancient ruins, and all secrets uncovered.',price:65,unit:'',image:'card-hexi.png'},
+{id:'imperial-palace',category:'exploration',label:'Map Exploration',name:'Imperial Palace Exploration',desc:'Full exploration of the majestic Imperial Palace region — elite areas, hidden corridors, and royal treasures.',price:30,unit:'',image:'card-imperial.png'},
+{id:'pvp-boost',category:'pvp-titles',label:'PVP Boost',name:'PVP Progress Boost',desc:'PVP rank and arena progress piloting. Price ranges from $10 to $40 depending on your current progress.',price:10,priceRange:'$10.00 - $40.00',unit:'',image:'service-pvp.png'},
+{id:'odditys',category:'quests',label:'Collection',name:'Odditys 100%',desc:'Collect all rare insects, crickets, and lotuses across the world map to upgrade your stats via the Melodies of Peace system.',price:15,unit:'',image:'card-oddities.png'},
+{id:'wandering-tales',category:'quests',label:'Story',name:'Wandering Tales',desc:'Complete all Wandering Tales storylines with full dialogue and reward collection per region.',price:15,unit:'/ Region',image:'service-story.png'},
+{id:'sentient-being',category:'quests',label:'Collection',name:'Sentient Beings 100%',desc:'Complete the Sentient Beings journal by clearing all regional Antiques, Boundary Stones, Chests, and Meow Meow puzzles.',price:25,unit:'',image:'card-sentient-beings.png'},
+{id:'abyss-conqueror',category:'pvp-titles',label:'Title',name:'Abyss Conqueror',desc:'Defeat the high-difficulty bosses in the Abyss Trials and claim your exclusive title and epic achievements.',price:5,unit:'/ Boss',image:'service-boss.png'},
+{id:'custom-title',category:'pvp-titles',label:'Title',name:'Custom Title',desc:'Earn any custom title of your choice. Pricing and requirements will be confirmed at the approval stage.',price:null,tba:true,tbaText:'Confirm at Approval',unit:'',image:'card-custom-title.png'},
+{id:'custom-build',category:'custom',label:'Custom Request',name:'Build Customization',desc:'Optimize your martial arts layout with the perfect weapon pairings (Strategic Sword, Spear, Panacea Fan) and Inner Ways setups.',price:null,tba:true,tbaText:'TBA',unit:'',image:'card-build.png'}
 ];
 let cart=[];
 const grid=document.getElementById('servicesGrid'),cartOverlay=document.getElementById('cartOverlay'),cartItemsC=document.getElementById('cartItems'),cartEmpty=document.getElementById('cartEmpty'),cartFooter=document.getElementById('cartFooter'),cartTotal=document.getElementById('cartTotal'),cartCount=document.getElementById('cartCountHeader'),bD=document.getElementById('cartBadgeDesktop'),bM=document.getElementById('cartBadgeMobile');
